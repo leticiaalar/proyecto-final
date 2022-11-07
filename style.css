@@ -1,0 +1,149 @@
+/*tipografia*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+/*Variables*/
+:root {
+  --white: #fff;
+  --back: rgba(0, 0, 0, 0.924);
+  --gray-ligth: #d8dde3;
+  --gray-dark: #576a90;
+  --blue-dark: #27324d;
+  --blue-ligth: #7087ba;
+  --color-min: #09cfe1;
+  --color-max: #c40048;
+  --blue-gradient: linear-gradient(180deg, #27324D 1.47%, rgba(255, 255, 255, 0) 177.73%, #7087BA 177.73%);
+  --blue-gradient-2: linear-gradient(359.76deg, rgba(39, 50, 77, 0.86) -17.83%, rgba(39, 50, 77, 0.86) 17.45%, #A1A8BF 114.64%);;
+
+}
+/*estilos generales*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Cuerpo*/
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--gray-ligth);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../icon/fondo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Estilos para el contenedor div principal*/
+.contenedor {
+  width: 400px;
+  background: var(--blue-gradient);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 2rem;
+  box-shadow: 10px 0 25px rgba(0, 0, 0, .3);
+}
+/*Estilos para la localizacion y el buscador*/
+.icono__location {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.icono__location:hover {
+  opacity: .8;
+}
+.icono__location img {
+  width: 100%;
+}
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.buscador input {
+  width: 200px;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, .5);
+  outline: none;
+  padding: .5rem 1rem;
+  border-radius: 20px;
+  margin: .5rem;
+  font-size: .8rem;
+  font-family: "Roboto", "Arial";
+  font-weight: 500;
+  color: var(--black-ligth);
+}
+.buscador input:focus {
+  border: 1.7px solid var(--white);
+}
+.buscador button {
+  background: var(--gray-dark);
+  width: 100px;
+  padding: 8px 0;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gray);
+  transform: scale(1);
+  transition: transform .3s ease-in-out;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.buscador button:hover {
+  transform: scale(1.07);
+  transition: transform .3s ease-in-out;
+}
+.buscador button:active {
+  transform: scale(.9);
+  transition: transform .3s ease-in-out;
+}
+/*Estilos para para el div de la temperatura y el icono*/
+.temperatura {
+  width: 200px;
+  height: 200px;
+  background: var(--blue-gradient-2);
+  border-radius: 50%;
+  text-align: center;
+  margin: .5rem auto;
+  overflow: hidden;
+  padding: 1rem;
+  box-shadow: 2px 3px 20px rgba(255, 255, 255, .05), -2px -2px 20px rgba(255, 255, 255, 0.169);
+}
+.temperatura img {
+ margin: 0 auto;
+}
+.temperatura h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 10%;
+  text-align: center;
+  align-items: center;
+}
+.temperatura .min, .max{
+  font-size: .9rem;
+  color: var(--gray);
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+.min i {
+  color: var(--color-min);
+}
+.max i {
+  color: var(--color-max);
+}
+
+/*Detalles y velocidad del viento*/
+#caja1 {
+  margin-top: 1rem;
+}
+.temperatura__descripcion, .velocidad__tiempo {
+  width: 250px;
+  padding: .5rem 1rem;
+  margin: .5rem auto;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 1.5px solid var(--gray);
+}

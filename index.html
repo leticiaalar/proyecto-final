@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon/app-del-clima.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="contenedor">
+        <span class="icono__location" id="icon-location" title="localización">
+            <img src="icon/map-pin-fill.png" alt="Icono de localizacion" tabindex="localización">
+        </span>
+        <h1>Wheather App</h1>
+        <!--Icono y buscador-->
+        <div class="buscador">
+            <input id="buscar" type="text">
+            <button id="boton-buscar">Search</button>
+            <p id="error-input"></p>
+        </div>
+        <h2 id="ubicacion"></h2>
+        <!--Temperaturas e iconos-->
+        <div class="temperatura">
+            <h2 id="temperatura-valor"></h2>
+            <img id="icono" src="" alt="Icono del clima"/>
+            <h3 class="min"></h3>
+            <h3 class="max"></h3>
+        </div>
+          <!--La temperatura actual-->
+        <div class="temperatura__descripcion" id="caja1">
+            <p id="temperatura-descripcion"></p>
+        </div>
+          <!--La velocidad del viento-->
+        <div class="velocidad__tiempo" id="caja3">
+            <p id="viento-velocidad"></p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
